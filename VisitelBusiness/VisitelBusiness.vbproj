@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{3E9B3EA7-59BA-4D36-B6F2-3304A659271A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VisitelBusiness</RootNamespace>
+    <AssemblyName>VisitelBusiness</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VisitelBusiness.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VisitelBusiness.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLEmployeeReports.vb" />
+    <Compile Include="BLEDICodes.vb" />
+    <Compile Include="BLEDICentral.vb" />
+    <Compile Include="BLEDISubmission.vb" />
+    <Compile Include="BLServiceFormsReports.vb" />
+    <Compile Include="BLTimesheetReports.vb" />
+    <Compile Include="BLUserPrivilege.vb" />
+    <Compile Include="BLUserMapping.vb" />
+    <Compile Include="BLGlobalConfiguration.vb" />
+    <Compile Include="BLServiceType.vb" />
+    <Compile Include="DataObject\ArgumentAttribute.vb" />
+    <Compile Include="BLComplaintLog.vb" />
+    <Compile Include="BLEmployee.vb" />
+    <Compile Include="BLCareSummary.vb" />
+    <Compile Include="BLMenu.vb" />
+    <Compile Include="BLTasks.vb" />
+    <Compile Include="BLCaseInfo.vb" />
+    <Compile Include="BLPayPeriodGenerator.vb" />
+    <Compile Include="BLCommon.vb" />
+    <Compile Include="BLPayPeriodDetail.vb" />
+    <Compile Include="BLEmployeeComments.vb" />
+    <Compile Include="BLClientComments.vb" />
+    <Compile Include="BLOigExclusionsDatabase.vb" />
+    <Compile Include="BLIndividualReports.vb" />
+    <Compile Include="DataObject\ServiceTypeDataObject.vb" />
+    <Compile Include="DataObject\UserMappingDataObject.vb" />
+    <Compile Include="DataObject\BaseDataObject.vb" />
+    <Compile Include="DataObject\CaseInfoDataObject.vb" />
+    <Compile Include="DataObject\EVV\AuthorizationDataObject.vb" />
+    <Compile Include="DataObject\EVV\ClientDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysScheduleDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysAuthorizationDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysClientDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysStaffDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysServicesDataObject.vb" />
+    <Compile Include="DataObject\EVV\MEDsysPositionsDataObject.vb" />
+    <Compile Include="DataObject\EVV\VisitDataObject.vb" />
+    <Compile Include="DataObject\EVV\EmployeeDataObject.vb" />
+    <Compile Include="DataObject\UserPrivilegeDataObject.vb" />
+    <Compile Include="DataObject\ClientCommentsDataObject.vb" />
+    <Compile Include="DataObject\ComplaintLogDataObject.vb" />
+    <Compile Include="DataObject\CareSummaryDataObject.vb" />
+    <Compile Include="DataObject\UserInfoDataObject.vb" />
+    <Compile Include="DataObject\EnumHelper.vb" />
+    <Compile Include="DataObject\KeyValueTriplet.vb" />
+    <Compile Include="DataObject\MenuDataObject.vb" />
+    <Compile Include="DataObject\EmployeeCommentsDataObject.vb" />
+    <Compile Include="DataObject\PayPeriodDetailDataObject.vb" />
+    <Compile Include="DataObject\Settings\CalendarSettingDataObject.vb" />
+    <Compile Include="DataObject\Settings\HospitalStaySettingDataObject.vb" />
+    <Compile Include="DataObject\TasksDataObject.vb" />
+    <Compile Include="BLPassword.vb" />
+    <Compile Include="EVV\BLVestaAuthorization.vb" />
+    <Compile Include="EVV\BLVestaClient.vb" />
+    <Compile Include="EVV\BLVestaEmployee.vb" />
+    <Compile Include="EVV\BLMEDsysPositions.vb" />
+    <Compile Include="EVV\BLScheduleGeneration.vb" />
+    <Compile Include="EVV\BLVestaVisit.vb" />
+    <Compile Include="EVV\BLMEDsysServices.vb" />
+    <Compile Include="EVV\BLMEDsysStaff.vb" />
+    <Compile Include="EVV\BLMEDsysClient.vb" />
+    <Compile Include="EVV\BLMEDsysAuthorization.vb" />
+    <Compile Include="EVV\BLMEDsysSchedules.vb" />
+    <Compile Include="Settings\BLCaseWorkerSetting.vb" />
+    <Compile Include="BLCity.vb" />
+    <Compile Include="BLClientInfo.vb" />
+    <Compile Include="Settings\BLClientTypeSetting.vb" />
+    <Compile Include="Settings\BLDoctorSetting.vb" />
+    <Compile Include="BLUserInfo.vb" />
+    <Compile Include="Settings\BLMaritalStatusSetting.vb" />
+    <Compile Include="BLState.vb" />
+    <Compile Include="Settings\BLStateSetting.vb" />
+    <Compile Include="Settings\BLCitySetting.vb" />
+    <Compile Include="Settings\BLClientStatusSetting.vb" />
+    <Compile Include="BLReceiver.vb" />
+    <Compile Include="BLPayer.vb" />
+    <Compile Include="Settings\BLClientGroupSetting.vb" />
+    <Compile Include="BLClientGroup.vb" />
+    <Compile Include="BLCaseWorker.vb" />
+    <Compile Include="BLMaritalStatus.vb" />
+    <Compile Include="BLClientStatus.vb" />
+    <Compile Include="BLDoctor.vb" />
+    <Compile Include="Settings\BLDischargeReasonSetting.vb" />
+    <Compile Include="BLDischargeReason.vb" />
+    <Compile Include="Settings\BLCountySetting.vb" />
+    <Compile Include="BLCounty.vb" />
+    <Compile Include="BLClientType.vb" />
+    <Compile Include="Settings\BLDiagnosisSetting.vb" />
+    <Compile Include="BLDiagnosis.vb" />
+    <Compile Include="BLClient.vb" />
+    <Compile Include="BLEVV.vb" />
+    <Compile Include="DataObject\Settings\CaseWorkerSettingDataObject.vb" />
+    <Compile Include="DataObject\CityDataObject.vb" />
+    <Compile Include="DataObject\Settings\ClientTypeSettingDataObject.vb" />
+    <Compile Include="DataObject\Settings\CitySettingDataObject.vb" />
+    <Compile Include="DataObject\Settings\ClientStatusSettingDataObject.vb" />
+    <Compile Include="DataObject\Settings\ClientGroupSettingDataObject.vb" />
+    <Compile Include="DataObject\ClientGroupDataObject.vb" />
+    <Compile Include="DataObject\ClientInfoDataObject.vb" />
+    <Compile Include="DataObject\CaseWorkerDataObject.vb" />
+    <Compile Include="DataObject\ClientStatusDataObject.vb" />
+    <Compile Include="DataObject\ClientTypeDataObject.vb" />
+    <Compile Include="DataObject\ClientDataObject.vb" />
+    <Compile Include="DataObject\ClientCaseDataObject.vb" />
+    <Compile Include="DataObject\SantraxDataObject.vb" />
+    <Compile Include="DataObject\DiagnosisDataObject.vb" />
+    <Compile Include="DataObject\Settings\DiagnosisSettingDataObject.vb" />
+    <Compile Include="DataObject\CountyDataObject.vb" />
+    <Compile Include="DataObject\Settings\CountySettingDataObject.vb" />
+    <Compile Include="DataObject\DischargeReasonDataObject.vb" />
+    <Compile Include="DataObject\Settings\DischargeReasonSettingDataObject.vb" />
+    <Compile Include="DataObject\DoctorDataObject.vb" />
+    <Compile Include="DataObject\MaritalStatusDataObject.vb" />
+    <Compile Include="DataObject\PayerDataObject.vb" />
+    <Compile Include="DataObject\ReceiverDataObject.vb" />
+    <Compile Include="DataObject\Settings\EmployeeSettingDataObject.vb" />
+    <Compile Include="DataObject\Settings\StateSettingDataObject.vb" />
+    <Compile Include="DataObject\StateDataObject.vb" />
+    <Compile Include="DataObject\Settings\DoctorSettingDataObject.vb" />
+    <Compile Include="DataObject\EnumDataObject.vb" />
+    <Compile Include="DataObject\LoginDataObject.vb" />
+    <Compile Include="DataObject\Settings\MaritalStatusSettingDataObject.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\BLEmployeeSetting.vb" />
+    <Compile Include="Settings\BLCalendarSetting.vb" />
+    <Compile Include="Settings\BLHospitalStaySetting.vb" />
+    <Compile Include="Settings\BLCompanySetting.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="targets\Microsoft.Application.targets" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VisitelDA\VisitelDA.vbproj">
+      <Project>{B15640BD-CF05-44D4-AE61-56BAC5C62ADB}</Project>
+      <Name>VisitelDA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project=".\targets\Microsoft.Application.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
