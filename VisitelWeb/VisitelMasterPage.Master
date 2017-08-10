@@ -1,0 +1,254 @@
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="VisitelMasterPage.master.vb"
+    Inherits="VisitelWeb.Visitel.VisitelMasterPage" %>
+
+<%@ Register Src="UserControl/TopBarSlidingPanel.ascx" TagName="TopBarSlidingPanel"
+    TagPrefix="uc7" %>
+<%@ Register Src="UserControl/UCChangePassword.ascx" TagName="UCChangePassword" TagPrefix="uc6" %>
+<%@ Register Src="~/UserControl/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/MenuAdapter.ascx" TagName="MenuAdapter" TagPrefix="uc1" %>
+<%@ Register Assembly="TSC.Timeout" Namespace="TSC.Timeout" TagPrefix="tsc" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ParentPage" runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="Kennedy Data Systems. Visitel" />
+    <meta name="keywords" content="" />
+    <link href="Style/VisitelStyle.css" rel="stylesheet" type="text/css" />
+    <link href="Style/SFMenu.css" rel="stylesheet" type="text/css" />
+    <%--    <link href='http://fonts.googleapis.com/css?family=Cuprum&subset=latin' rel='stylesheet' type='text/css'>--%>
+    <%--    <link rel="stylesheet" type="text/css" href="Css/jquery.confirm.css" />--%>
+   <%-- <script type="text/javascript" language="javascript"  src="<%# ResolveUrl("~/") %>JavaScript/jquery-1.3.2.min.js"></script>--%>
+    <%--<script type="text/javascript" language="javascript"  src="<%# ResolveUrl("~/") %>JavaScript/jquery-1.4.2.min.js"></script>--%>
+    <%--    <script type="text/javascript" language="javascript" src="../JavaScript/jQuery 1.7.2.js"></script>--%>
+    <%-- <script type="text/javascript" language="javascript" src="../JavaScript/jquery-1.11.2.min.js"></script> --%>
+    <%--<script type="text/javascript" language="javascript" src="<%=ResolveUrl("~/JavaScript/jquery-1.8.3.min.js")%>"></script>--%>
+    <script type="text/javascript" language="javascript" src="<%# ResolveUrl("~/") %>JavaScript/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" language="javascript" src="<%# ResolveUrl("~/") %>JavaScript/jquery.number.js"></script>
+    <script type="text/javascript" language="javascript" src="<%# ResolveUrl("~/") %>JavaScript/CommonFunctions.js"></script>
+  <%--  <script type="text/javascript">
+          var $j = $.noConflict(true);
+    </script>
+--%>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--    <script type="text/javascript" language="javascript" src="/JavaScript/PayPeriodGenerator/PayPeriodGeneratorControl.js"></script>--%>
+    <%--<script type="text/javascript" src="JavaScript/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="JavaScript/jquery-1.4.2.min.js"></script>--%>
+    <%--    <script type="text/javascript" src="<%=ResolveUrl("~")%>JavaScript/jQuery 1.7.2.js"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~")%>JavaScript/jQuery UI 1.8.18.js"></script>--%>
+    <form id="FormVisitel" runat="server">
+  
+    <asp:ScriptManager ID="ScriptManagerParentPage" runat="server" EnablePartialRendering="true">
+        <Scripts>
+            <%--Needs to load jquery.cookie.js before jquery-ui--%>
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.cookie-1.4.1.js" />--%>
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.tools.min.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery.tools-1.2.6.min.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.datepick.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/thickbox.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery-impromptu.3.0.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery-ui-1.7.2.custom.min.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery-ui-1.11.2.min.js" />
+            <asp:ScriptReference Path="~/JavaScript/hoverIntent.js" />
+            <asp:ScriptReference Path="~/JavaScript/supersubs.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.bgiframe.js" />  
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.bgiframe.min.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/superfish.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.blockUI.js" />
+            <asp:ScriptReference Path="~/JavaScript/scroll-startstop.events.jquery.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.browserCloseEvent.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.maskedinput-1.3.min.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div id="viewableregion">
+        <%--<hr id="header_stripe" class="displayRegion" />--%>
+       <%-- <uc7:TopBarSlidingPanel ID="TopBarSlidingPanel1" runat="server">
+        </uc7:TopBarSlidingPanel>--%>
+        <div class="fullHeaderRegion displayHeaderRegion">
+            <div id="header" class="displayRegion">
+                <uc1:Header ID="htHeaderTitle" runat="server" />
+                <marquee behavior="alternate" direction="right"><p><font size="4" face="verdana">This site is under development...</font></p> </marquee>
+            </div>
+            <div id="PageHeader" class="displayRegion">
+            
+                <table cellpadding="0" width="100%">
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblPageHeader" runat="server" Text="Page Header Goes Here"></asp:Label>
+                        </td>
+                        <td class="PageLastUpdate" style="height: 16px">
+                            &nbsp;
+                        </td>
+                        <td style="padding-left: 200px; text-align: right;">
+                            <asp:DropDownList ID="DropDownListThemeSelect" runat="server" AutoPostBack="true"
+                                OnSelectedIndexChanged="DropDownListThemeSelect_OnSelectedIndexChanged">
+                                <asp:ListItem Value="redmond">Redmond</asp:ListItem>
+                                <asp:ListItem Value="ui-darkness">UI Darkness</asp:ListItem>
+                                <asp:ListItem Value="blitzer">Blitzer</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        <td align="right" class="PageUserName" style="padding-right: 10px;">
+                            <asp:Label ID="lblUser" runat="server" Text="Test"></asp:Label>
+                        </td>
+                    </tr>
+                     <%--<tr>
+                    <td>
+                     <marquee behavior="alternate" direction="right"><p><font size="4" face="verdana">This site is under development...</font></p> </marquee>
+                    </td>
+                    </tr>--%>
+                </table>
+                
+            </div>
+        </div>
+        <div id="menuParentHolder">
+        <div id="menuHolder" class="displayRegion">
+            <uc1:MenuAdapter ID="ucMenuAdapter" runat="server" />
+        </div>
+        </div>
+        <div id="PageMainContent" class="displayRegion">
+            <asp:UpdatePanel ID="upnlMsg" runat="server" UpdateMode="Always">
+                <ContentTemplate>
+                    <div id="divErrMesg" class="ui-widget" runat="server">
+                        <div class="ui-state-error ui-corner-all" style="padding: 0pt 0.7em;">
+                            <span class="ui-icon ui-icon-alert" style="margin-right: 0.3em;"></span>
+                            <asp:Label ID="lblErrMsg" CssClass="errorMessage" runat="server" EnableViewState="false">
+                            </asp:Label>
+                        </div>
+                    </div>
+                    <div id="divInfoMsg" class="ui-widget" runat="server">
+                        <div class="ui-state-default ui-corner-all" style="padding: 0pt 0.7em;">
+                            <span class="ui-icon ui-icon-info" style="margin-right: 0.3em;"></span>
+                            <asp:Label ID="lblMessage" Font-Bold="true" CssClass="successMessage" runat="server"
+                                Text="" EnableViewState="false"></asp:Label>
+                        </div>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentMain" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer" class="displayFooterRegion">
+            <uc2:Footer ID="FooterTitle1" runat="server" />
+        </div>
+        <%--<uc3:NoScriptMsg ID="NoScriptMsg1" runat="server" />--%>
+
+
+
+        <tsc:timeout id="Timeout1" runat="server" enabled="true" timeouturl="~/Default.aspx"
+            displaybutton="false">
+        <template>
+                    <p>
+                        <span class="ui-icon ui-icon-alert" style="float: left; margin: 1px 10px 20px 0;"></span>
+                        Your session is about to Expire.
+                    </p>
+                    <br style="font-size: x-small;" />
+                    <p>
+                        Click <b>OK</b> to continue your session.</p>
+                </template>
+        </tsc:timeout>
+    </div>
+        <div id="ChangePasswordWidget" style="width: 300px;">
+        <div id="ChangePasswordWidgetContent">
+             <uc6:UCChangePassword ID="UCChangePassword1" runat="server" />
+        </div>
+        <a href="#" class="ChangePasswordWidget" title="Click to Change Password">Change Password</a>
+    </div>
+    <div style="display: none;" class="nav_up" id="nav_up">
+    </div>
+    <div style="display: none;" class="nav_down" id="nav_down">
+    </div>
+    <script type="text/javascript">
+
+        //        function ThickboxClosed() {
+        //            jQuery("form :input[type='text']:enabled:first").focus();
+        //        }
+
+        jQuery(document).ready(function () {
+
+
+                    jQuery(".ChangePasswordWidget").toggle(function () {
+                        jQuery("#ChangePasswordWidget").animate({ left: "0px" });
+                        return false;
+                    },
+            			function () {
+            			    jQuery("#ChangePasswordWidget").animate({ left: "-300px" });
+            			    return false;
+            			}
+            		);
+
+            jQuery('#maincontainer').fadeIn('slow');
+
+                            $("#aspnetForm").submit(function () 
+                            {   
+                                if(Page_ClientValidate() == true)
+                                {
+                                    var srcRoot = '<%=ResolveUrl("~")%>' + 'Images/ajax-loading.gif';
+                                    $.blockUI({ message: '<h3><img src="' + srcRoot + '" /> Processing...</h3>' });
+                                }
+                                else
+                                {
+                                    return false;
+                                }
+                            });
+
+            jQuery("ul.sf-menu").supersubs({
+                minWidth: 25,   // minimum width of sub-menus in em units 
+                maxWidth: 85,   // maximum width of sub-menus in em units 
+                extraWidth: 2    // extra width can ensure lines don't sometimes turn over 
+                // due to slight rounding differences and font-family 
+
+
+            }).superfish({
+                animation: { opacity: 'show' },  // fade-in and slide-down animation 
+                speed: 'fast',
+                delay: 800,
+                dropShadows: true, //optional, but I prefer this option disabled.
+                autoArrows: true
+            }).find('ul').bgIframe({ opacity: false });  // call supersubs first, then superfish, so that subs are 
+            // not display:none when measuring. Call before initialising 
+            // containing tabs for same reason. 
+
+            jQuery.unblockUI();
+        });
+
+        /*Start Scroll Top/Bottom Widget*/
+        var $elem = jQuery('#PageMainContent');
+
+        jQuery('#nav_up').fadeIn('slow');
+        jQuery('#nav_down').fadeIn('slow');
+
+        jQuery(window).bind('scrollstart', function () {
+            jQuery('#nav_up,#nav_down').stop().animate({ 'opacity': '0.2' });
+        });
+        jQuery(window).bind('scrollstop', function () {
+            jQuery('#nav_up,#nav_down').stop().animate({ 'opacity': '1' });
+        });
+
+        jQuery('#nav_down').click(
+				function (e) {
+				    jQuery('html, body').animate({ scrollTop: $elem.height() }, 800);
+				}
+			);
+        jQuery('#nav_up').click(
+				function (e) {
+				    jQuery('html, body').animate({ scrollTop: '0px' }, 800);
+				}
+			);
+        /*End Scroll Top/Bottom Widget*/
+            
+    </script>
+    <!-- Including jQuery and our jQuery Confirm plugin -->
+    <%-- <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>--%>
+    <%--   <script type="text/javascript" language="javascript" src="../JavaScript/jquery.confirm.js"></script>
+    <script type="text/javascript" language="javascript" src="../JavaScript/script.js"></script>--%>
+    </form>
+</body>
+</html>

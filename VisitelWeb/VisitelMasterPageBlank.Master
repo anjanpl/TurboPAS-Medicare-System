@@ -1,0 +1,71 @@
+<%@ Master Language="VB" AutoEventWireup="True" CodeBehind="~/VisitelMasterPageBlank.Master.vb"
+    Inherits="VisitelWeb.Visitel.VisitelMasterPageBlank" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="PopupPage" runat="server">
+    <title>Popup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="Style/VisitelStyle.css" rel="stylesheet" type="text/css" />
+   
+    <asp:ContentPlaceHolder ID="cphPopupHead" runat="server">
+     <script type="text/javascript" language="javascript" src="../../JavaScript/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" language="javascript" src="../../JavaScript/CommonFunctions.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="FormVisitelPopup" runat="server">
+    <asp:ScriptManager ID="ScriptManagerPopupPage" runat="server" EnablePartialRendering="true">
+        <Scripts>
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery-1.4.1.js" />--%>
+           <%-- <asp:ScriptReference Path="~/JavaScript/jquery-1.8.3.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery-1.8.3.min.js" />
+            <asp:ScriptReference Path="~/JavaScript/CommonFunctions.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.alphanumeric.pack.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/ui/jquery.ui.core.js" />
+            <asp:ScriptReference Path="~/JavaScript/ui/jquery.ui.widget.js" />
+            <asp:ScriptReference Path="~/JavaScript/ui/jquery.ui.mouse.js" />
+            <asp:ScriptReference Path="~/JavaScript/ui/jquery.ui.draggable.js" />
+            <asp:ScriptReference Path="~/JavaScript/ui/jquery.ui.droppable.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery.alerts.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.tools.min.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery.tools-1.2.6.min.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery-ui-1.7.2.custom.min.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery-ui-1.11.2.min.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/jquery.datepick.js" />--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery-impromptu.3.0.js" />
+            <asp:ScriptReference Path="~/JavaScript/maskedEdit/maskCore.js" />
+            <asp:ScriptReference Path="~/JavaScript/maskedEdit/jquery.ui.mask.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.maxlength.js" />
+            <%--<asp:ScriptReference Path="~/JavaScript/array.js" />--%>
+            <%--This flushes the crystal report--%>
+            <asp:ScriptReference Path="~/JavaScript/jquery.a-tools-1.3.1.js" />
+            <asp:ScriptReference Path="~/JavaScript/jquery.blockUI.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div>
+        <div id="divErrMesg" class="ui-widget" runat="server">
+            <div class="ui-state-error ui-corner-all" style="padding: 0pt 0.7em;">
+                <span class="ui-icon ui-icon-alert" style="margin-right: 0.3em;"></span>
+                <asp:Label ID="lblErrMsg" runat="server" EnableTheming="false">
+                </asp:Label>
+            </div>
+        </div>
+        <div id="divInfoMsg" class="ui-widget" runat="server">
+            <div class="ui-state-highlight ui-corner-all" style="padding: 0pt 0.7em;">
+                <span class="ui-icon ui-icon-info" style="margin-right: 0.3em;"></span>
+                <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+<%--<script language="javascript">
+    jQuery(function () {
+        jQuery.unblockUI();
+    });
+
+</script>--%>
+</html>
